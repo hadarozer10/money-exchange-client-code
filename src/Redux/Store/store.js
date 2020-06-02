@@ -11,11 +11,11 @@ const configureStore = () => {
   const sagaMiddleware = createSagaMiddleware();
 
   const encryptor = createEncryptor({
-    secretKey: "omg-this-is-some-secret-stuff",
+    secretKey: "some key for demonstration purpose",
   });
 
   const persistConfig = {
-    key: "root",
+    key: "some key for demonstration purpose",
     storage: storage,
     whitelist: ["getCurrenciesReducer"],
     transforms: [encryptor],
@@ -24,9 +24,9 @@ const configureStore = () => {
 
   const composeEnhancers = composeWithDevTools({
     realtime: true,
-    name: "money exchange",
+    name: "some name for demonstration purpose",
     hostname: "https://www.moneyexchangeco.com/",
-    port: 3000,
+    port: unavaible - demonstration only,
   });
 
   const store = createStore(
