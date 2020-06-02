@@ -110,8 +110,8 @@ function Currencies(props) {
     ) {
       props.userLoadRequest();
       props.getCurrenciesRequest();
-      const socket = io("https://www.moneyexchangeco.com/socket.io");
-      socket.on("message", ({ currencies, serverTime }) => {
+      const socket = io("url not available - demonstration purposes");
+      socket.on("some message", ({ currencies, serverTime }) => {
         setTime(serverTime);
         props.currenciesUpdateRequest(currencies);
       });
